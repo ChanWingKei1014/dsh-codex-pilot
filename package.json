@@ -1,0 +1,54 @@
+{
+  "name": "dsh-codex-pilot",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: let DSH direct your local Codex through requirements → UI design → code → acceptance, with a live status panel.",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "codex",
+    "orchestration",
+    "openai-codex",
+    "workflow"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChanWingKei1014/dsh-codex-pilot.git"
+  },
+  "homepage": "https://github.com/ChanWingKei1014/dsh-codex-pilot",
+  "bugs": {
+    "url": "https://github.com/ChanWingKei1014/dsh-codex-pilot/issues"
+  }
+}

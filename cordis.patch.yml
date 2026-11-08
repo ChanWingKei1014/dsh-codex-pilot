@@ -1,0 +1,6 @@
+# dsh-codex-pilot bundle patch: 让 DSH 调用本机 Codex 协作干活。
+# 按 `dsh plugin --profile web add dsh-codex-pilot` 安装后自动生效。
+# 热挂载: 纯 insert(id/name)可免重启(客户端半边需刷新页面)。
+- insert:
+    - id: codex-pilot
+      name: dsh-codex-pilot
